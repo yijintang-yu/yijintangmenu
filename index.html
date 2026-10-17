@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>易筋堂傳統整復推拿 · 服務菜單</title>
+<title>易筋堂傳統整復推拿 · 官方網站</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -90,7 +90,8 @@
 
   .subtitle {
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 18px;
+    font-weight: 700;
     color: var(--muted);
     letter-spacing: 0.18em;
   }
@@ -347,9 +348,15 @@
   }
 
   @media (max-width: 520px) {
-    .service-card { padding: 28px 18px; }
+    .content-area { padding-left: 12px; padding-right: 12px; }
+    .service-card { padding: 28px 14px; }
     .price-main { font-size: 34px; }
     .price-table-cell { padding: 11px 8px; font-size: 12px; }
+  }
+
+  @media (max-width: 400px) {
+    .content-area { padding-left: 8px; padding-right: 8px; }
+    .service-card { padding: 24px 10px; }
   }
 </style>
 </head>
@@ -374,10 +381,11 @@
     <svg viewBox="0 0 24 24" width="16" height="16" style="flex-shrink:0;vertical-align:middle;" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="5" fill="#06C755"/><path d="M20 10.5C20 7.46 16.42 5 12 5S4 7.46 4 10.5c0 2.69 2.39 4.96 5.62 5.39.22.05.52.14.59.33.07.17.05.43.02.6l-.1.57c-.03.17-.13.67.59.36.72-.3 3.87-2.28 5.28-3.9C16.95 12.77 20 11.78 20 10.5z" fill="#fff"/></svg>
     預約方式
   </button>
-  <button class="tab-btn" onclick="switchTab('full', this)">✦ 服務介紹</button>
+  <button class="tab-btn" onclick="switchTab('full', this)">✦ 服務項目/收費</button>
   <button class="tab-btn" onclick="switchTab('compare', this)">◆ 方案比較</button>
   <button class="tab-btn" onclick="switchTab('features', this)">◆ 易筋堂特色</button>
   <button class="tab-btn" onclick="switchTab('frequency', this)">◆ 多久整復一次</button>
+  <button class="tab-btn" onclick="switchTab('faq', this)">◆ 常見問答</button>
 </div>
 
 <div class="content-area">
@@ -388,18 +396,25 @@
     <!-- 60分鐘方案 -->
     <div class="service-card">
       <div class="card-ornament">60</div>
-      <div class="service-title">全方位放鬆整復 <span style="font-size:22px;">60分鐘</span></div>
-      <div class="price-row">
-        <div class="price-main" style="font-size:52px; color:#7A0418;">
-          <span class="currency">NT$</span>1,800
+      <div class="service-title" style="white-space:nowrap; color:var(--crimson);">全方位放鬆整復 <span style="font-size:22px;">60分鐘</span></div>
+      <div class="price-row" style="flex-direction:column; align-items:flex-start; gap:10px;">
+        <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;">
+          <span style="font-size:13px; color:var(--muted); letter-spacing:0.08em;">原價</span>
+          <span style="font-size:30px; font-weight:700; color:var(--muted);">NT$2,000</span>
         </div>
-        <div>
-          <div class="price-original" style="font-size:16px;">原價 NT$2,000</div>
-          <div class="badge" style="font-size:15px; padding:6px 16px; margin-top:6px; display:inline-block;">會員優惠 · 省 $200</div>
+        <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;">
+          <span style="font-size:11px; color:var(--crimson); letter-spacing:0.08em;">會員優惠價</span>
+          <div class="price-main" style="font-size:52px; color:#7A0418;">
+            <span class="currency">NT$</span>1,800
+          </div>
         </div>
       </div>
+      <div style="margin:4px 0 26px; padding:16px 18px; background:rgba(139,105,20,0.06); border:1px solid rgba(139,105,20,0.15); border-radius:4px; font-size:13px; color:var(--muted); line-height:2; letter-spacing:0.04em; font-weight:700;">
+        🔸凡本人加入官方LINE好友並完成資料建檔，即升級會員，享會員價 $1,800元。<br>
+        🔸未加入官方LINE好友或由親友代約者，以原價 $2,000元計費。
+      </div>
       <p class="service-desc">
-        ▶️ <strong>肌肉深度舒壓 × 重點部位加強</strong> ◀️<br>
+        <span style="white-space:nowrap;">▶️ <strong>肌肉深度舒壓 × 重點部位加強</strong> ◀️</span><br>
         透過大範圍肌肉放鬆，結合關鍵部位精準調理。<br><br>
         🔹 <strong>大面積放鬆</strong><br>
         針對肌肉進行系統性放鬆，緩解緊繃與壓力。<br><br>
@@ -423,15 +438,22 @@
     <!-- 120分鐘方案 -->
     <div class="service-card" style="margin-top:4px;">
       <div class="card-ornament">120</div>
-      <div class="service-title">全方位放鬆整復 <span style="font-size:22px;">120分鐘</span></div>
-      <div class="price-row">
-        <div class="price-main" style="font-size:52px; color:#7A0418;">
-          <span class="currency">NT$</span>3,600
+      <div class="service-title" style="white-space:nowrap; color:var(--crimson);">全方位放鬆整復 <span style="font-size:22px;">120分鐘</span></div>
+      <div class="price-row" style="flex-direction:column; align-items:flex-start; gap:10px;">
+        <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;">
+          <span style="font-size:13px; color:var(--muted); letter-spacing:0.08em;">原價</span>
+          <span style="font-size:30px; font-weight:700; color:var(--muted);">NT$4,000</span>
         </div>
-        <div>
-          <div class="price-original" style="font-size:16px;">原價 NT$4,000</div>
-          <div class="badge" style="font-size:15px; padding:6px 16px; margin-top:6px; display:inline-block;">會員優惠 · 省 $400</div>
+        <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;">
+          <span style="font-size:11px; color:var(--crimson); letter-spacing:0.08em;">會員優惠價</span>
+          <div class="price-main" style="font-size:52px; color:#7A0418;">
+            <span class="currency">NT$</span>3,600
+          </div>
         </div>
+      </div>
+      <div style="margin:4px 0 26px; padding:16px 18px; background:rgba(139,105,20,0.06); border:1px solid rgba(139,105,20,0.15); border-radius:4px; font-size:13px; color:var(--muted); line-height:2; letter-spacing:0.04em; font-weight:700;">
+        🔸凡本人加入官方LINE好友並完成資料建檔，即升級會員，享會員價 $3,600元。<br>
+        🔸未加入官方LINE好友或由親友代約者，以原價 $4,000元計費。
       </div>
       <p class="service-desc">
         全身肌肉深度舒壓 + 重點部位調理，加長版讓身體獲得更完整的恢復與調整。<br><br>
@@ -547,9 +569,9 @@
           <div style="padding:11px 14px; font-size:14px; letter-spacing:0.05em; color:var(--muted); border-right:1px solid rgba(139,105,20,0.1);">日</div>
           <div style="padding:11px 14px; font-size:14px; letter-spacing:0.05em; color:var(--text);">10:00 - 21:00</div>
         </div>
-        <div style="display:grid; grid-template-columns:3rem 1fr; border-bottom:1px solid rgba(139,105,20,0.1); background:rgba(122,4,24,0.05);">
-          <div style="padding:11px 14px; font-size:14px; letter-spacing:0.05em; font-weight:700; color:var(--crimson); border-right:1px solid rgba(139,105,20,0.1);">一</div>
-          <div style="padding:11px 14px; font-size:14px; letter-spacing:0.05em; font-weight:700; color:var(--crimson);">10:00 - 21:00</div>
+        <div style="display:grid; grid-template-columns:3rem 1fr; border-bottom:1px solid rgba(139,105,20,0.1);">
+          <div style="padding:11px 14px; font-size:14px; letter-spacing:0.05em; color:var(--muted); border-right:1px solid rgba(139,105,20,0.1);">一</div>
+          <div style="padding:11px 14px; font-size:14px; letter-spacing:0.05em; color:var(--text);">10:00 - 21:00</div>
         </div>
         <div style="display:grid; grid-template-columns:3rem 1fr; border-bottom:1px solid rgba(139,105,20,0.1);">
           <div style="padding:11px 14px; font-size:14px; letter-spacing:0.05em; color:var(--muted); border-right:1px solid rgba(139,105,20,0.1);">二</div>
@@ -664,6 +686,77 @@
   </div>
 
   <!-- TAB 7 -->
+  <div id="tab-faq" class="tab-panel">
+    <div class="service-card">
+      <div class="card-ornament">問</div>
+      <div class="service-title" style="margin-bottom:22px;">常見問答</div>
+
+      <div style="display:flex; flex-direction:column; gap:22px;">
+
+        <div>
+          <div style="display:flex; gap:10px; align-items:flex-start; margin-bottom:8px;">
+            <span style="color:var(--crimson); font-size:16px; font-weight:900; flex-shrink:0;">Q1</span>
+            <div style="font-size:15px; font-weight:700; color:var(--brown); letter-spacing:0.06em; line-height:1.7;">為什麼沒有局部調理項目？</div>
+          </div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.9; letter-spacing:0.04em; margin-left:30px;">
+            身體的緊繃其實是環環相扣的。專業整復不只是「哪裡痠推哪裡」，局部的不舒服，往往是全身結構相互牽引的結果。全面性的調理，才能幫您達到真正的深層放鬆。
+          </p>
+        </div>
+
+        <div class="section-divider" style="margin:0;"><span>◇</span></div>
+
+        <div>
+          <div style="display:flex; gap:10px; align-items:flex-start; margin-bottom:8px;">
+            <span style="color:var(--crimson); font-size:16px; font-weight:900; flex-shrink:0;">Q2</span>
+            <div style="font-size:15px; font-weight:700; color:var(--brown); letter-spacing:0.06em; line-height:1.7;">關於整復後體感</div>
+          </div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.9; letter-spacing:0.04em; margin-left:30px;">
+            因個人體質不同，調整後身體若有痠痛感，都是正常的深層釋放喔！
+          </p>
+        </div>
+
+        <div class="section-divider" style="margin:0;"><span>◇</span></div>
+
+        <div>
+          <div style="display:flex; gap:10px; align-items:flex-start; margin-bottom:8px;">
+            <span style="color:var(--crimson); font-size:16px; font-weight:900; flex-shrink:0;">Q3</span>
+            <div style="font-size:15px; font-weight:700; color:var(--brown); letter-spacing:0.06em; line-height:1.7;">推拿前需要空腹嗎？</div>
+          </div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.9; letter-spacing:0.04em; margin-left:30px;">
+            不需要空腹。但為了您的體感舒適度，不建議剛用完餐（飽腹狀態）立即進行調理。
+          </p>
+        </div>
+
+        <div class="section-divider" style="margin:0;"><span>◇</span></div>
+
+        <div>
+          <div style="display:flex; gap:10px; align-items:flex-start; margin-bottom:8px;">
+            <span style="color:var(--crimson); font-size:16px; font-weight:900; flex-shrink:0;">Q4</span>
+            <div style="font-size:15px; font-weight:700; color:var(--brown); letter-spacing:0.06em; line-height:1.7;">生理期間可以推拿整復嗎？</div>
+          </div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.9; letter-spacing:0.04em; margin-left:30px;">
+            可以的。經期不影響推拿，但若您當下身體感到極度不適或有疑慮，建議改期或休息。
+          </p>
+        </div>
+
+        <div class="section-divider" style="margin:0;"><span>◇</span></div>
+
+        <div>
+          <div style="display:flex; gap:10px; align-items:flex-start; margin-bottom:8px;">
+            <span style="color:var(--crimson); font-size:16px; font-weight:900; flex-shrink:0;">Q5</span>
+            <div style="font-size:15px; font-weight:700; color:var(--brown); letter-spacing:0.06em; line-height:1.7;">服裝須知</div>
+          </div>
+          <p style="font-size:14px; color:var(--muted); line-height:1.9; letter-spacing:0.04em; margin-left:30px;">
+            請穿著舒適寬鬆或有彈性的上衣、長褲，方便老師操作。<br>
+            請避免牛仔褲或裙子，以免影響活動與整復效果。
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 8 -->
   <div id="tab-booking" class="tab-panel">
     <div class="service-card" style="text-align:center;">
       <div class="card-ornament">約</div>
